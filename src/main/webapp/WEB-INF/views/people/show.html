@@ -6,10 +6,11 @@
 </head>
 <body>
 
-<p th:text="${person.getName()}">VALUE</p>
-<p th:text="${person.getId()}">VALUE</p>
-<p th:text="${person.getEmail()}">VALUE</p>
-<p th:text="${person.getProfession()}">VALUE</p>
+<p th:text="${'Name: ' + person.getName()}">VALUE</p>
+<p th:text="${'ID: ' + person.getId()}">VALUE</p>
+<p th:text="${'Age: ' + person.getAge()}">VALUE</p>
+<p th:text="${'Email: ' + person.getEmail()}">VALUE</p>
+<p th:text="${'Profession: ' + person.getProfession()}">VALUE</p>
 
 <br/>
 <hr/>
@@ -20,6 +21,12 @@
 
 <form th:method="DELETE" th:action="@{/people/{id}(id=${person.getId()})}">
     <input type="submit" value="Delete"/>
+</form>
+
+<br/>
+
+<form th:method="GET" th:action="@{/people}">
+    <input type="submit" value="Back to list"/>
 </form>
 
 </body>
