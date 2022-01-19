@@ -19,9 +19,9 @@
     <input type="text" th:field="*{email}" id="email"/>
     <p style="color:red" th:if="${#fields.hasErrors('email')}" th:errors="*{email}">Email error</p>
     <br/>
-    <label for="phoneNumber">Enter phone: </label>
-    <input type="text" th:field="*{phoneNumber}" id="phoneNumber"/>
-    <p style="color:red" th:if="${#fields.hasErrors('phoneNumber')}" th:errors="*{phoneNumber}">PhoneNumber error</p>
+    <label for="profession">Enter profession: </label>
+    <input type="text" th:field="*{profession}" id="profession"/>
+    <p style="color:red" th:if="${#fields.hasErrors('profession')}" th:errors="*{profession}">Profession error</p>
     <br/>
     <hr/>
     <input type="submit" value="Create person"/>

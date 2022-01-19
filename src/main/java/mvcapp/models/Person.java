@@ -20,17 +20,16 @@ public class Person {
     private String email;
 
     @NotEmpty(message = "Should not be empty")
-    @Size(min = 11, max = 11, message = "Should be contains 11 number")
-    private String phoneNumber;
+    private String profession;
 
     public Person() {}
 
-    public Person(int id, String name, int age, String email, String phoneNumber) {
+    public Person(int id, String name, int age, String email, String profession) {
         this.id = id;
         this.name = name;
         this.age = age;
         this.email = email;
-        this.phoneNumber = phoneNumber;
+        this.profession = profession;
     }
 
     public int getAge() {
@@ -49,12 +48,12 @@ public class Person {
         this.email = email;
     }
 
-    public String getPhoneNumber() {
-        return phoneNumber;
+    public String getProfession() {
+        return profession;
     }
 
-    public void setPhoneNumber(String phoneNumber) {
-        this.phoneNumber = phoneNumber;
+    public void setProfession(String profession) {
+        this.profession = profession;
     }
 
     public int getId() {
